@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'codestar.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("postgresql://neondb_owner:npg_gyvp8YzbO4tq@ep-snowy-waterfall-agf1xidn.c-2.eu-central-1.aws.neon.tech/train_pound_santa_347049"))
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
 
