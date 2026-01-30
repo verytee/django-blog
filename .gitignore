@@ -3,3 +3,11 @@ env.py
 __pycache__
 *.py[cod]
 db.sqlite3
+core.Microsoft*
+core.mongo*
+core.python*
+node_modules/
+github/
+.vscode/
+cloudinary_python.txt
+blog/fixtures/
