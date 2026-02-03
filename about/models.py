@@ -1,10 +1,12 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 
 
 class About(models.Model):
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=200, unique=True)
+    profile_image = CloudinaryField('image', default='placeholder')
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
 
@@ -13,7 +15,7 @@ class About(models.Model):
 
 
 class CollaborateRequest(models.Model):
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=200, unique=True)
     email = models.EmailField()
     message = models.TextField()
     read = models.BooleanField(default=False)
