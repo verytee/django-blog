@@ -5,6 +5,9 @@ from cloudinary.models import CloudinaryField
 
 
 class About(models.Model):
+    """
+    Stores the About Me page content. :model:`about.About`
+    """
     title = models.CharField(max_length=200, unique=True)
     profile_image = CloudinaryField('image', default='placeholder')
     updated_on = models.DateTimeField(auto_now=True)
@@ -15,6 +18,9 @@ class About(models.Model):
 
 
 class CollaborateRequest(models.Model):
+    """
+    Stores collaboration requests from users. :model:`about.CollaborateRequest`
+    """
     name = models.CharField(max_length=200, unique=True)
     email = models.EmailField()
     message = models.TextField()
